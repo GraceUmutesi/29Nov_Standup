@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="index.css">
     <title>DOM practice</title>
 </head>
-<body>
+<body >
     <div class="all">
-
-        <h1>Portfolio</h1>
         <h2 id="element1">My Portfolio</h2>
         <p>Click on the buttons to filter a category:</p>
       
-        <div class="buttons">
+        <div id="button-group" class="buttons">
           <button class="btn active" data-filter="all"> Show all</button>
           <button class="btn" data-filter="Nature"> Nature</button>
           <button class="btn" data-filter="Cars"> Cars</button>
-          <button class="btn" data-filter="People"> People</button>
+          <button id="button" class="btn" data-filter="People"> People</button>
         </div>
       
         <div class="photo">
@@ -27,9 +25,10 @@
             <div class="nature">
       
               <div class="card Nature">
-                <img src="images/mountains.jpeg" alt="">
+                <img onmouseover="mouseOver()" onmouseout="mouseOut()" src="images/mountains.jpeg" alt="">
                 <h3 id="mount">Mountains</h3>
-                <p>Lorem ipsum dolor..</p>
+                <p id="theP">Lorem ipsum dolor..</p>
+
               </div>
       
               <div class="card Nature">
@@ -39,7 +38,7 @@
               </div>
       
               <div class="card Nature">
-                <img src="images/nature.jpeg" alt="">
+                <img id="img3" src="images/nature.jpeg" alt="">
                 <h3>Forest</h3>
                 <p>Lorem ipsum dolor..</p>
               </div>
@@ -70,7 +69,7 @@
       
             <div class="people">
       
-              <div class="card People">
+              <div onclick="changeColor(this)" class="card People">
                 <img src="images/girl.jpeg" alt="">
                 <h3>Girl</h3>
                 <p>Lorem ipsum dolor..</p>
@@ -94,5 +93,7 @@
         </div>
       </div>  
       <script src="index.js"></script>
+      <script src="index2.js"></script>
+     
 </body>
 </html>
